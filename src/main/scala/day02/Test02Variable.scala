@@ -24,7 +24,5 @@ object Test02Variable {
 
     var +-*/ = "加减乘除"
     var _abc = null
-
-
   }
 }

@@ -1,5 +1,6 @@
 package day03
 
+import scala.collection.immutable
 import scala.language.postfixOps
 
 object Test01ForLoop {
@@ -18,10 +19,10 @@ object Test01ForLoop {
       println(i)
     }
 
-    for (i <- Array(12, 23 ,34)) {
+    for (i <- Array(12, 23, 34)) {
       println(i)
     }
-    for (i <- Set(12, 23 ,34)) {
+    for (i <- Set(12, 23, 34)) {
       println(i)
     }
 
@@ -37,7 +38,7 @@ object Test01ForLoop {
     for (i <- 1 to 10 by 2) {
       println(i)
     }
-    for (i <- 1 .to(10, 2)) {
+    for (i <- 1.to(10, 2)) {
       println(i)
     }
     for (i <- 1 to 10 reverse) {
@@ -47,5 +48,28 @@ object Test01ForLoop {
       println(i)
     }
 
+    for (i <- 1 to 10; j <- 1 to 5) {
+      println(s"i:${i},j:${j}")
+    }
+    for (i <- 1 to 10; j = i + 1) {
+      println(s"i:${i},j:${j}")
+    }
+
+    val a: Unit = for (i <- 1 to 10) {
+      println(i)
+    }
+    println(a)
+
+    val b: immutable.IndexedSeq[Int] = for (i <- 1 to 10) yield i * i
+    println(b)
+
+    var num = 1
+    while (num <= 10) {
+      num += 1
+    }
+
+    do {
+      num += 1
+    } while (num <= 10)
   }
 }

@@ -7,7 +7,7 @@ object Test01FunctionMethod {
       println(s"hi,${name}")
     }
     //定义函数：返回值为箭头函数
-    def sayGo(name: String) = (age: String) => {
+    def sayGo(name: String):String => Unit = (age: String) => {
       println(s"go,${name},${age}")
     }
     //赋值箭头函数：返回值为Unit

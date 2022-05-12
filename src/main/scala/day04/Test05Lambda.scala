@@ -8,7 +8,6 @@ object Test05Lambda {
     def fun2(name: String): Unit = {
       println(name)
     }
-
     def f(func: String => Unit, name: String): Unit = {
       func(name)
     }

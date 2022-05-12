@@ -18,7 +18,7 @@ object Test05Lambda {
   }
   val javaCode: String =
     """
-      |public class TestService<T> {
+      |public class Test<T> {
       |    public static void main(String[] args) {
       |        Consumer<String> fun1 = (str) -> {
       |            System.out.println(str);
@@ -29,10 +29,10 @@ object Test05Lambda {
       |                System.out.println(s);
       |            }
       |        };
-      |        TestService<String> testService = new TestService<>();
-      |        testService.f(fun1, "接口=匿名函数(lambda)");
-      |        testService.f(fun2, "接口的匿名实现类");
-      |        testService.f((s1 -> {
+      |        Test<String> test = new Test<>();
+      |        test.f(fun1, "接口=匿名函数(lambda)");
+      |        test.f(fun2, "接口的匿名实现类");
+      |        test.f((s1 -> {
       |            System.out.println(s1);
       |        }), "匿名函数(lambda)");
       |    }

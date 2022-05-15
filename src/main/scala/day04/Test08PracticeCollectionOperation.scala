@@ -1,6 +1,6 @@
 package day04
 
-object Test08CollectionOperation {
+object Test08PracticeCollectionOperation {
   def main(args: Array[String]): Unit = {
     def arrayOperation(array: Array[Int], op: Int => Int): Array[Int] = {
       for (item <- array) yield op(item)

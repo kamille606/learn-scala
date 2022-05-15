@@ -27,5 +27,10 @@ object Test06LambdaSimplify {
     val minus = (a: Int, b: Int) => a - b
     println(dualFunctionOneAndTwo(add))
     println(dualFunctionOneAndTwo(minus))
+
+    println(dualFunctionOneAndTwo((a: Int, b: Int) => a - b))
+    println(dualFunctionOneAndTwo((a, b) => a - b))
+    println(dualFunctionOneAndTwo(_ - _))
+    println(dualFunctionOneAndTwo(_ + _))
   }
 }

@@ -60,6 +60,7 @@ object Test01ForLoop {
     }
     println(a)
 
+    //返回数组
     val b: immutable.IndexedSeq[Int] = for (i <- 1 to 10) yield i * i
     println(b)
 

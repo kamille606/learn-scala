@@ -63,5 +63,28 @@ object Test07HighOrderFunction {
     val stringToUnit = func6("a")
     println(stringToUnit("b"))
     println(func6("a")("b"))
+
+    def func(i: Int): String => (Char => Boolean) = {
+      def f1(s: String): Char => Boolean = {
+        def f2(c: Char): Boolean = {
+          if (i == 0 && s == "" && c == '0') false else true
+        }
+        f2
+      }
+      f1
+    }
+
+    println(func(0)("")('0'))
+
+    def func0(i: Int): String => Char => Boolean = {
+      s => c => if (i == 0 && s == "" && c == '0') false else true
+    }
+
+    //柯里化
+    def func00(i: Int)(s: String)(c: Char): Boolean = {
+      if (i == 0 && s == "" && c == '0') false else true
+    }
+
+    println(func00(0)("")('0'))
   }
 }

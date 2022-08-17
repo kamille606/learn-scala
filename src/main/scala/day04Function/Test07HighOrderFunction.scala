@@ -1,4 +1,4 @@
-package day04
+package day04Function
 
 object Test07HighOrderFunction {
   def main(args: Array[String]): Unit = {

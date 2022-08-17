@@ -1,4 +1,4 @@
-package day04
+package day04Function
 
 object Test08PracticeCollectionOperation {
   def main(args: Array[String]): Unit = {

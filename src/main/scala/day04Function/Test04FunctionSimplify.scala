@@ -1,4 +1,4 @@
-package day04
+package day04Function
 
 object Test04FunctionSimplify {
   def main(args: Array[String]): Unit = {

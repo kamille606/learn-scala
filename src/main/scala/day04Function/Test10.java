@@ -1,4 +1,4 @@
-package day04;
+package day04Function;
 
 public class Test10 {
     public static void main(String[] args) {

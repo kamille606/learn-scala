@@ -6,6 +6,7 @@ object Test08Abstract {
   }
 }
 
+//var只能重新赋值,val才能重写
 abstract class Person8 {
   val name: String = "person"
   var age: Int = _

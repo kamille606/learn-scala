@@ -16,16 +16,17 @@ object Test06 {
   }
 }
 class Person6(var age: Int) {
+  val name: String = "person"
   def printInfo(): Unit = {
-    println(s"person $age")
+    println(s"person $name $age")
   }
 }
-class Student6(var name:String, age:Int) extends Person6(age) {
+class Student6(override val name: String, age:Int) extends Person6(age) {
   override def printInfo(): Unit = {
     println(s"student $name $age")
   }
 }
-class Teacher6(var name:String, age:Int) extends Person6(age) {
+class Teacher6(override val name: String, age:Int) extends Person6(age) {
   override def printInfo(): Unit = {
     println(s"teacher $name $age")
   }

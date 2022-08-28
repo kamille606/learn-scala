@@ -20,5 +20,8 @@ object Test07SetMutable {
     println(set1)
     set1.remove(2)
     println(set1)
+
+    val set2 = set1 ++ set1
+    println(set2)
   }
 }

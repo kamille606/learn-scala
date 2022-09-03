@@ -25,5 +25,16 @@ object Test02MatchType {
     println(descType(List(2)))
     println(descType(Array(2)))
     println(descType(Array("2")))
+
+    for (arr <- List(Array(0), Array(1, 2, 3), Array("a", "b", 4))) {
+      val result = arr match {
+        case Array(0) => "0"
+        case Array(x, y) => s"x:$x y:$y"
+        case Array(1, _*) => "array "
+        case _ => "else"
+      }
+      println(result)
+
+    }
   }
 }

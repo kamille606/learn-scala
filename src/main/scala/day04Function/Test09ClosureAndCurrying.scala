@@ -37,7 +37,7 @@ object Test09ClosureAndCurrying {
       }
     }
     def addByA2(a: Int): Int => Int = {
-      b =>a + b
+      b => a + b
     }
     def addByA3(a: Int)(b: Int): Int = {
       a + b
